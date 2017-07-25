@@ -7,7 +7,7 @@ using System.Text;
 /// Name: Bradley Sutton
 /// Date: July 25, 2017
 /// Description: This is the Deck Class
-/// Version 0.3 - Fixed bug in the _initalize method
+/// Version 0.4 - Added public shuffle method
 /// </summary>
 
 namespace COMP123_S2017_Lesson11A
@@ -15,6 +15,10 @@ namespace COMP123_S2017_Lesson11A
     public class Deck:List<Card>
     {
         //PRIVATE INSTANCE VARIABLES
+        private Random _random;
+
+        //PRIVATE PROPERTIES
+        public Random Random { get { return this._random; } }
 
         //PUBLIC VARIABLES
 
@@ -30,10 +34,15 @@ namespace COMP123_S2017_Lesson11A
 
         //PRIVATE METHODS
         /// <summary>
-        /// This private method (_initalize) that loads a deck with 52 cards
+        /// This private method (_initalize) that loads a deck with 52 cards.
+        /// This method also initalizes the random private variable.
         /// </summary>
         private void _initialize()
         {
+            // initalize the random object
+            this._random = new Random();
+
+            // load the list with cards
             for (int suit = 0; suit <= (int)Suit.Spades; suit++)
             {
                 for (int face = 1; face <= (int)Face.King; face++)
@@ -58,6 +67,19 @@ namespace COMP123_S2017_Lesson11A
             }
 
             return outputstring;
+        }
+
+        /// <summary>
+        /// This is the public method used to shuffle the deck of cards.
+        /// </summary>
+        public void Shuffle()
+        {
+            int firstCard, secondCard;
+
+
+            firstCard = this.Random.Next(0,52);
+            secondCard = this.Random.Next(0, 52);
+            tempCard = this[secondCard].Clone();
         }
     }
 }
