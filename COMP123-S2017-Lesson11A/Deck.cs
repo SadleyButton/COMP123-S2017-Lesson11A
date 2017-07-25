@@ -7,9 +7,7 @@ using System.Text;
 /// Name: Bradley Sutton
 /// Date: July 25, 2017
 /// Description: This is the Deck Class
-/// Version 0.2 - Created the main constructor for the Deck Class
-///             - Created a private method to load a deck of 52 cards
-///             - Created a ToString method to output the current deck result
+/// Version 0.3 - Fixed bug in the _initalize method
 /// </summary>
 
 namespace COMP123_S2017_Lesson11A
@@ -36,9 +34,9 @@ namespace COMP123_S2017_Lesson11A
         /// </summary>
         private void _initialize()
         {
-            for (int suit = 0; suit < (int)Suit.Spades; suit++)
+            for (int suit = 0; suit <= (int)Suit.Spades; suit++)
             {
-                for (int face = 1; face < (int)Face.King; face++)
+                for (int face = 1; face <= (int)Face.King; face++)
                 {
                     this.Add(new Card((Face)face, (Suit)suit));
                 }
