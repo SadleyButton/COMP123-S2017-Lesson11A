@@ -5,7 +5,7 @@ using System.Text;
 
 /// <summary>
 /// Name: Bradley Sutton
-/// Date: July 25, 2017
+/// Date: July 27, 2017
 /// Description: This is the Abstract superclass Card List.  It inherits from the build-in List generic collection and consumes the Card class.
 /// Version 0.1 - Created the CardList class
 /// </summary>

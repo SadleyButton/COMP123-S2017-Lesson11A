@@ -5,8 +5,8 @@ using System.Text;
 
 /// <summary>
 /// Name: Bradley Sutton
-/// Date: July 25, 2017
-/// Description: This is the Deck Class
+/// Date: July 27, 2017
+/// Description: This is the Deck Class. It inherits from the CardList class.
 /// Version 0.5 - Refactored Desk class to inherit from CardList
 /// </summary>
 
@@ -23,14 +23,6 @@ namespace COMP123_S2017_Lesson11A
         //PUBLIC VARIABLES
 
         //CONSTRUCTORS --------------------------------------------------------------------------
-        /// <summary>
-        /// This is the main constructor for the Deck Class
-        /// Takes no arguments
-        /// </summary>
-        public Deck()
-        {
-            this._initialize();
-        }
 
         //PRIVATE METHODS
         /// <summary>
@@ -60,6 +52,8 @@ namespace COMP123_S2017_Lesson11A
         public override string ToString()
         {
             string outputstring = "";
+            outputstring += "The Deck contains:\n";
+            outputstring += "===========================================================\n";
 
             foreach (Card card in this)
             {
