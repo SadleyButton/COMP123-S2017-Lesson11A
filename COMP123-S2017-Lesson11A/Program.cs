@@ -25,8 +25,17 @@ namespace COMP123_S2017_Lesson11A
             Console.WriteLine(deck.ToString());
             Console.WriteLine();
 
+            /*
             hand.Add(deck.Deal1()); //Deals one card from the top of the deck
             Console.WriteLine(hand.ToString());
+            Console.WriteLine();
+            hand.Add(deck.Deal1()); //Deals one card from the top of the deck
+            Console.WriteLine(hand.ToString());
+            */
+
+            //This will create a new hand object and assigns it to hand
+            //hand = deck.Deal5();
+
         }
     }
 }
