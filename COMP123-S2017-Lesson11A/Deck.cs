@@ -7,12 +7,12 @@ using System.Text;
 /// Name: Bradley Sutton
 /// Date: July 25, 2017
 /// Description: This is the Deck Class
-/// Version 0.4 - Added public shuffle method
+/// Version 0.5 - Refactored Desk class to inherit from CardList
 /// </summary>
 
 namespace COMP123_S2017_Lesson11A
 {
-    public class Deck:List<Card>
+    public class Deck : CardList
     {
         //PRIVATE INSTANCE VARIABLES
         private Random _random;
@@ -37,7 +37,7 @@ namespace COMP123_S2017_Lesson11A
         /// This private method (_initalize) that loads a deck with 52 cards.
         /// This method also initalizes the random private variable.
         /// </summary>
-        private void _initialize()
+        protected override void _initialize()
         {
             // initalize the random object
             this._random = new Random();

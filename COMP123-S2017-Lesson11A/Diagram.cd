@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <ClassDiagram MajorVersion="1" MinorVersion="1" MembersFormat="FullSignature">
   <Class Name="COMP123_S2017_Lesson11A.Card">
-    <Position X="6.75" Y="1" Width="2.5" />
+    <Position X="6.5" Y="1" Width="2.5" />
     <TypeIdentifier>
       <HashCode>AAAAAABAAAAAAAAAAAAABAgAAAAAAAAAAAAAAAAAgBA=</HashCode>
       <FileName>Card.cs</FileName>
@@ -9,10 +9,17 @@
     <Lollipop Position="0.2" />
   </Class>
   <Class Name="COMP123_S2017_Lesson11A.Deck">
-    <Position X="10" Y="1" Width="1.5" />
+    <Position X="6.5" Y="3.75" Width="2.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAACAAAAAEAAAAAAAAAAAABAAAAAAAAAAAEAE=</HashCode>
       <FileName>Deck.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="COMP123_S2017_Lesson11A.CardList">
+    <Position X="1.75" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>CardList.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Enum Name="COMP123_S2017_Lesson11A.Suit">
