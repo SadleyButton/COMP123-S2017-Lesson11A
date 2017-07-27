@@ -7,7 +7,7 @@ using System.Text;
 /// Name: Bradley Sutton
 /// Date: July 27, 2017
 /// Description: This is the Deck Class. It inherits from the CardList class.
-/// Version 0.5 - Refactored Desk class to inherit from CardList
+/// Version 0.6 - Refactored Desk class to add the Deal1 method.
 /// </summary>
 
 namespace COMP123_S2017_Lesson11A
@@ -45,6 +45,24 @@ namespace COMP123_S2017_Lesson11A
         }
 
         //PUBLIC METHODS
+
+        /// <summary>
+        /// This method clones the top card, removes from top of deck, and return to hand.
+        /// </summary>
+        /// <returns></returns>
+        public Card Deal1()
+        {
+            //Clone the top card of the desk for placement in Hand
+            Card firstCard = (Card)this[0].Clone();
+            //Remove the Top Card from the CardList - Deck
+            this.RemoveAt(0);
+
+            //WriteLine for debugging purposes
+            //Console.WriteLine("Deck now contains: " + this.Count + " Cards");
+
+            return firstCard;
+        }
+
         /// <summary>
         /// This method overrides the public ToString method and outputs the current Deck contents.
         /// </summary>

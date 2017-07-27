@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 /// Name: Bradley Sutton
 /// Date: July 25, 2017
 /// Description: Lesson 11 A
-/// Version 0.2 - Added syntax to shuffle deck and display the shuffled results
+/// Version 0.3 - Created a new Hand for the Deal1 method
 /// </summary>
 
 namespace COMP123_S2017_Lesson11A
@@ -17,10 +17,16 @@ namespace COMP123_S2017_Lesson11A
     {
         static void Main(string[] args)
         {
+            Hand hand = new Hand(); //new empty Hand container (player)
+
             Deck deck = new Deck();
             Console.WriteLine(deck.ToString());
             deck.Shuffle();
             Console.WriteLine(deck.ToString());
+            Console.WriteLine();
+
+            hand.Add(deck.Deal1()); //Deals one card from the top of the deck
+            Console.WriteLine(hand.ToString());
         }
     }
 }
