@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 /// Name: Bradley Sutton
 /// Date: July 27, 2017
 /// Description: Lesson 11 A
-/// Version 0.4 - Created a new Hand for the Deal5 method
+/// Version 0.5 - Tested the HighestCards method
 /// </summary>
 
 namespace COMP123_S2017_Lesson11A
@@ -31,21 +31,12 @@ namespace COMP123_S2017_Lesson11A
             Console.WriteLine(hand.ToString());
             */
 
-            /* Lab Homework Outline
-            
-            Use the following to deal five cards into a hand
-                hand = deck.Deal5();
-            */
             Hand hand = new Hand(); //new empty Hand container (player)
             hand = deck.Deal5();
             Console.WriteLine(hand.ToString());
+            hand.HighestCards(hand);
 
-
-            /*
-            Sort Hand to order by Highest Cards using LINQ
-                    from hand in this
-                        where ...
-            */
+            
 
 
         }

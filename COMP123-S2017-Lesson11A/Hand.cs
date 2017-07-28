@@ -7,7 +7,7 @@ using System.Text;
 /// Name: Bradley Sutton
 /// Date: July 27, 2017
 /// Description: This is the Hand Class
-/// Version 0.4 - Fixed bug with the non-implimented _initalize method
+/// Version 0.5 - Created the HighestCards method
 /// </summary>
 
 namespace COMP123_S2017_Lesson11A
@@ -31,6 +31,22 @@ namespace COMP123_S2017_Lesson11A
         }
 
         //PUBLIC METHODS
+
+        public void HighestCards(Hand hand)
+        {
+            var sortCards =
+                from cards in this
+                orderby cards.Face descending
+                select cards;
+            
+            Console.WriteLine("Hand of Cards in Order\n" +
+                              "========================");
+            
+            foreach (var card in sortCards)
+            {
+                Console.WriteLine("The {0} of {1}", card.Face, card.Suit);
+            }
+        }
 
         /// <summary>
         /// This method overrides the built-in ToString method
