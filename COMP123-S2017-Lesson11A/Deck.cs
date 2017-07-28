@@ -7,7 +7,8 @@ using System.Text;
 /// Name: Bradley Sutton
 /// Date: July 27, 2017
 /// Description: This is the Deck Class. It inherits from the CardList class.
-/// Version 0.6 - Refactored Desk class to add the Deal1 method.
+/// Version 0.7 - Refactored Desk class to add the Deal5 method.
+///             - FIXED: the shuffle by placing the randomizer into the loop
 /// </summary>
 
 namespace COMP123_S2017_Lesson11A
@@ -64,6 +65,22 @@ namespace COMP123_S2017_Lesson11A
         }
 
         /// <summary>
+        /// This method will deal a hand, using the Deal1 method and return cards to the Driver Class hand
+        /// </summary>
+        /// <returns></returns>
+        public Hand Deal5()
+        {
+            Hand fiveCards = new Hand();  //Creates a hand (container) to hold cards until complete
+
+            for (int cardNo = 0; cardNo < 5; cardNo++)
+            {
+                fiveCards.Add(Deal1());
+            }
+
+            return fiveCards;
+        }
+
+        /// <summary>
         /// This method overrides the public ToString method and outputs the current Deck contents.
         /// </summary>
         /// <returns></returns>
@@ -89,12 +106,11 @@ namespace COMP123_S2017_Lesson11A
             int firstCard, secondCard;
             Card tempCard;
 
-            firstCard = this.Random.Next(0,52);
-            secondCard = this.Random.Next(0, 52);
-            tempCard = (Card)this[secondCard].Clone();
-
             for (int i = 0; i < this.Count; i++)
             {
+                firstCard = this.Random.Next(0, 52);
+                secondCard = this.Random.Next(0, 52);
+                tempCard = (Card)this[secondCard].Clone();
                 this[secondCard].Face = this[firstCard].Face;
                 this[secondCard].Suit = this[firstCard].Suit;
                 this[firstCard].Face = this[secondCard].Face;

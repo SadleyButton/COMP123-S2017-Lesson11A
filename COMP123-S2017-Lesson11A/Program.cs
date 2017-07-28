@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 /// <summary>
 /// Name: Bradley Sutton
-/// Date: July 25, 2017
+/// Date: July 27, 2017
 /// Description: Lesson 11 A
-/// Version 0.3 - Created a new Hand for the Deal1 method
+/// Version 0.4 - Created a new Hand for the Deal5 method
 /// </summary>
 
 namespace COMP123_S2017_Lesson11A
@@ -17,8 +17,6 @@ namespace COMP123_S2017_Lesson11A
     {
         static void Main(string[] args)
         {
-            Hand hand = new Hand(); //new empty Hand container (player)
-
             Deck deck = new Deck();
             Console.WriteLine(deck.ToString());
             deck.Shuffle();
@@ -33,8 +31,22 @@ namespace COMP123_S2017_Lesson11A
             Console.WriteLine(hand.ToString());
             */
 
-            //This will create a new hand object and assigns it to hand
-            //hand = deck.Deal5();
+            /* Lab Homework Outline
+            
+            Use the following to deal five cards into a hand
+                hand = deck.Deal5();
+            */
+            Hand hand = new Hand(); //new empty Hand container (player)
+            hand = deck.Deal5();
+            Console.WriteLine(hand.ToString());
+
+
+            /*
+            Sort Hand to order by Highest Cards using LINQ
+                    from hand in this
+                        where ...
+            */
+
 
         }
     }
